@@ -1,0 +1,72 @@
+@import "./../variables";
+@import "./../functions";
+
+.wp-block-herocode-offcanvas {
+	.block-editor-button-block-appender {
+		color: var( --herocode-offcanvas-close--borderColor, rgba(255,255,255,0.5) );
+		box-shadow: inset 0 0 0 1px var( --herocode-offcanvas-close--borderColor, rgba(255,255,255,0.5) );
+
+		&:hover {
+			color: var( --herocode-offcanvas-close--borderColor, rgba(255,255,255,0.75) );
+		  box-shadow: inset 0 0 0 1px var( --herocode-offcanvas-close--borderColor, rgba(255,255,255,0.75) );
+		}
+	}
+}
+
+.herocode-offcanvas {
+
+	// placement
+	&-start,
+	&-end {
+		top: var( --observer-top );
+		bottom: var( --observer-bottom );
+	}
+
+	&-start {
+		left: var( --observer-left );
+	}
+
+	&-end {
+		right: var( --observer-right );
+	}
+
+	&-top,
+	&-bottom {
+		left: var( --observer-left );
+		right: var( --observer-right );
+	}
+
+	&-top {
+		top: var( --observer-top );
+	}
+
+	&-bottom {
+		bottom: var( --observer-bottom );
+	}
+
+	// overlay
+	&-overlay {
+		left: var( --observer-left );
+		top: var( --observer-top );
+		right: var( --observer-right );
+		bottom: var( --observer-bottom );
+	}
+}
+
+// вывод иконки в панели справа в настройках
+.remixicon--panel-row {
+	padding: 4px;
+	width: 100%;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #f4f4f4;
+
+	svg {
+		width: 100%;
+		height: 100%;
+		max-width: 24px;
+		max-height: 24px;
+	}
+}

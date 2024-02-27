@@ -1,0 +1,51 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "herocode/progress",
+	"title": "Herocode Progress",
+	"version": "0.1.4",
+	"keywords": [ "hcp", "herocode", "progress" ],
+	"supports": {
+		"html": false,
+		"__experimentalBorder": {
+			"radius": true,
+			"width": true,
+			"color": true,
+			"style": true,
+			"__experimentalDefaultControls": {
+				"radius": true
+			}
+		},
+		"spacing": {
+			"padding": true,
+			"margin": true
+		}
+	},
+	"attributes": {
+		"backgroundColor": {
+			"type": "string",
+			"default": ""
+		},
+		"overlay-backgroundColor": {
+			"type": "string",
+			"default": ""
+		},
+		"width": {
+			"type": "string",
+			"default": ""
+		},
+		"height": {
+			"type": "string",
+			"default": ""
+		},
+		"clientId": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "hcp-blocks",
+	"category": "hcp-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

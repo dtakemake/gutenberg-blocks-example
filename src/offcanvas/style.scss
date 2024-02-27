@@ -1,0 +1,213 @@
+@import "./../variables";
+@import "./../functions";
+
+.wp-block-herocode-offcanvas {
+	box-sizing: border-box;
+
+	&.is-open {
+
+		.herocode-offcanvas {
+			transition: transform ease-in-out 0.3s;
+			opacity: 1;
+			visibility: visible;
+		}
+
+		// placement
+		.herocode-offcanvas-start,
+		.herocode-offcanvas-end {
+			transform: translateX(0);
+		}
+
+		.herocode-offcanvas-top,
+		.herocode-offcanvas-bottom {
+			transform: translateY(0);
+		}
+
+		// body
+		.herocode-offcanvas-body {
+			transition: opacity 0.3s ease-out 0.3s;
+			opacity: 1;
+		}
+
+		// overlay
+		.herocode-offcanvas-overlay {
+			transition: opacity linear 0.3s;
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+
+.herocode-offcanvas {
+	position: fixed;
+	z-index: 95;
+	transition: transform 0.3s ease-in-out 0.3s, opacity 0s linear 0.6s, visibility 0s linear 0.6s;
+	opacity: 0;
+	visibility: hidden;
+
+	display: flex;
+	padding: var( --herocode-offcanvas--padding, 64px 24px 0px 24px );
+	box-sizing: border-box;
+
+	// settings
+	color: var( --herocode-offcanvas--color, #adb5bd );
+	background-color: var( --herocode-offcanvas--backgroundColor, #212529 );
+
+	// placement
+	&-start,
+	&-end {
+		top: 0;
+		bottom: 0;
+		width: min( 100%, var( --herocode-offcanvas--width, 400px ) )
+	}
+
+	&-start {
+		left: 0;
+		transform: translateX(-100%);
+	}
+
+	&-end {
+		right: 0;
+		transform: translateX(100%);
+	}
+
+	&-top,
+	&-bottom {
+		left: 0;
+		right: 0;
+		height: min( 100%, var( --herocode-offcanvas--height, 400px ) )
+	}
+
+	&-top {
+		top: 0;
+		transform: translateY(-100%);
+	}
+
+	&-bottom {
+		bottom: 0;
+		transform: translateY(100%);
+	}
+
+	// блок с контентом
+	&-body {
+		flex-grow: 1;
+		overflow: hidden auto;
+		opacity: 0;
+		transition: opacity 0.3s ease-in-out;
+
+		// hidden scroll
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+
+		&::-webkit-scrollbar {
+			width: 0;
+			height: 0;
+	  }
+
+		& > *:first-child {
+			margin-block-start: 0;
+		}
+
+		& > *:last-child {
+			padding-block-end: 48px;
+		}
+	}
+
+	// close button
+	&-close {
+		position: absolute;
+		z-index: 1;
+
+		// 375px - 24px => 1440 - 64px
+		// right: max( 6%, 24px ); may be
+		right: 24px;
+		top: 16px;
+
+		width: 42px;
+		height: 42px;
+		cursor: pointer;
+		box-sizing: border-box;
+		background-color: inherit;
+
+		&:hover {
+
+			& > span {
+				transform: rotate(-90deg);
+			}
+		}
+		
+		span {
+			position: absolute;
+			z-index: 2;
+			top: 10%;
+			left: 10%;
+			width: 80%;
+			height: 80%;
+			transition: transform 0.3s ease;
+			transform-origin: 50% 50%;
+
+			&::before,
+			&::after {
+				content: "";
+				border-block: solid 1px var( --herocode-offcanvas-close--borderColor, rgba(255,255,255,0.5) );
+				position: absolute;
+				z-index: 1;
+				left: 0;
+				top: 50%;
+				width: 100%;
+				height: 0;
+				margin-top: -1px;
+				box-sizing: border-box;
+			}
+
+			&::before {
+				transform: rotate(45deg);
+			}
+
+			&::after {
+				transform: rotate(-45deg);
+			}
+		}
+	}
+
+	// overlay
+	&-overlay {
+		position: fixed;
+		z-index: 91;
+		inset: 0;
+		background-color: var( --herocode-offcanvas-overlay--backgroundColor, rgba(255,255,255,0.5) );
+		visibility: hidden;
+		opacity: 0;
+		transition: opacity 0.3s linear 0.3s, visibility 0s linear 0.6s;
+	}
+
+	// toggler
+	&-toggler {
+		display: inline-block;
+		color: var( --herocode-offcanvas-toggler--color, inherit );
+		line-height: inherit;
+		cursor: pointer;
+
+		&--type {
+			&-text {
+				font: inherit;
+				text-decoration: inherit;
+			}
+
+			&-icon {
+				line-height: 0;
+			}
+		}
+
+		:is(svg) {
+			width: var( --herocode-offcanvas-toggler--width, 24px);
+			height: var( --herocode-offcanvas-toggler--height, 24px);
+			max-width: 100%;
+			max-height: 100%;
+		}
+
+		&:hover {
+			color: var(--herocode-offcanvas-toggler-hover--color);
+		}
+	}
+}

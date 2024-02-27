@@ -1,0 +1,69 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "herocode/line-clamp",
+	"title": "Adaptive line-clamp",
+	"version": "0.1.3",
+	"keywords": [ "hcp", "herocode", "adaptive", "line-clamp" ],
+	"supports": {
+		"html": false,
+		"color": {
+			"background": true,
+			"gradients": true,
+			"heading": true,
+			"text": true,
+			"link": true
+		},
+		"align": [ "wide", "full" ],
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true
+		}
+	},
+	"attributes": {
+		"mobile": {
+			"type": "object",
+			"default": {
+				"margin": {
+					"top": "",
+					"right": "",
+					"bottom": "",
+					"left": ""
+				},
+				"lineClamp": ""
+			}
+		},
+		"tablet": {
+			"type": "object",
+			"default": {
+				"margin": {
+					"top": "",
+					"right": "",
+					"bottom": "",
+					"left": ""
+				},
+				"lineClamp": ""
+			}
+		},
+		"desktop": {
+			"type": "object",
+			"default": {
+				"margin": {
+					"top": "",
+					"right": "",
+					"bottom": "",
+					"left": ""
+				},
+				"lineClamp": ""
+			}
+		},
+		"clientId": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "hcp-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

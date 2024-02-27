@@ -1,0 +1,103 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "herocode/offcanvas",
+	"title": "Offcanvas",
+	"version": "0.1.5",
+	"keywords": [ "hcp", "herocode", "offcanvas" ],
+	"supports": {
+		"html": false,
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true
+		}
+	},
+	"attributes": {
+		"color": {
+			"type": "string",
+			"default": ""
+		},
+		"backgroundColor": {
+			"type": "string",
+			"default": ""
+		},
+		"width": {
+			"type": "string",
+			"default": ""
+		},
+		"height": {
+			"type": "string",
+			"default": ""
+		},
+		"padding": {
+			"type": "object",
+			"default": {
+				"top": "",
+				"left": "",
+				"right": "",
+				"bottom": ""
+			}
+		},
+		"close-borderColor": {
+			"type": "string",
+			"default": ""
+		},
+		"overlay-backgroundColor": {
+			"type": "string",
+			"default": ""
+		},
+		"togglerType": {
+			"type": "string",
+			"enum": [ "text", "icon" ],
+			"default": "text"
+		},
+		"togglerText": {
+			"type": "string",
+			"default": ""
+		},
+		"togglerIconName": {
+			"type": "string",
+			"default": ""
+		},
+		"togglerIconPath": {
+			"type": "string",
+			"default": ""
+		},
+		"toggler-width": {
+			"type": "string",
+			"default": "24px"
+		},
+		"toggler-height": {
+			"type": "string",
+			"default": "24px"
+		},
+		"toggler-color": {
+			"type": "string",
+			"default": ""
+		},
+		"toggler-hover-color": {
+			"type": "string",
+			"default": ""
+		},
+		"placement": {
+			"type": "string",
+			"enum": [ "start", "top", "end", "bottom" ],
+			"default": "start"
+		},
+		"clientId": {
+			"type": "string",
+			"default": ""
+		},
+		"templateLock": {
+			"type": [ "string", "boolean" ],
+			"enum": [ "all", "insert", false ]
+		}
+	},
+	"styles": [],
+	"textdomain": "hcp-blocks",
+	"category": "hcp-blocks",
+	"viewScript": "herocode-blocks-offcanvas",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

@@ -1,0 +1,14 @@
+@import "./../variables";
+@import "./../functions";
+
+.herocode-progress {
+	box-sizing: border-box;
+	background-color: var(--herocode-progress-overlay--backgroundColor, #fff);
+
+	&__bar {
+		width: var(--herocode-progress--width, 50%);
+		height: var(--herocode-progress--height, 24px);
+		background-color: var(--herocode-progress--backgroundColor, #333);
+		border-radius: inherit;
+	}
+}

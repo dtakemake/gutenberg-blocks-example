@@ -1,0 +1,104 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "herocode/backgrounds",
+	"title": "Backgrounds",
+	"version": "0.1.6",
+	"keywords": [ "hcp", "herocode", "backgrounds" ],
+	"supports": {
+		"html": false,
+		"spacing": {
+			"padding": true,
+			"margin": true
+		},
+		"color": {
+			"background": false,
+			"heading": true,
+			"text": true,
+			"link": true
+		},
+		"dimensions": {
+			"minHeight": true
+		},
+		"align": [ "wide", "full" ],
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true
+		}
+	},
+	"attributes": {
+		"backgroundColor": {
+			"type": "string",
+			"default": ""
+		},
+		"fill": {
+			"type": "string",
+			"default": ""
+		},
+		"turnOver": {
+			"type": "boolean",
+			"default": false
+		},
+		"placement": {
+			"type": "string",
+			"enum": [ "start", "top", "end", "bottom" ],
+			"default": "top"
+		},
+		"clientId": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"styles": [
+		{
+			"name": "diagonal",
+			"label": "Diagonal",
+			"isDefault": true
+		},
+		{
+			"name": "wave",
+			"label": "Wave"
+		},
+		{
+			"name": "sinusoid",
+			"label": "Sinusoid"
+		},
+		{
+			"name": "stalactite",
+			"label": "Stalactite"
+		},
+		{
+			"name": "rounding",
+			"label": "Rounding"
+		},
+		{
+			"name": "zigzag",
+			"label": "Zigzag"
+		},
+		{
+			"name": "waves",
+			"label": "Waves"
+		},
+		{
+			"name": "bubbles",
+			"label": "Bubbles"
+		},
+		{
+			"name": "octagon",
+			"label": "Octagon"
+		},
+		{
+			"name": "flash",
+			"label": "Flash"
+		},
+		{
+			"name": "dune",
+			"label": "Dune"
+		}
+	],
+	"textdomain": "hcp-blocks",
+	"category": "hcp-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

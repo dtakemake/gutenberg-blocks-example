@@ -1,0 +1,134 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "herocode/divider",
+	"title": "Divider",
+	"version": "0.1.4",
+	"keywords": [ "hcp", "herocode", "divider" ],
+	"supports": {
+		"html": false,
+		"spacing": {
+			"margin": true,
+			"padding": true
+		},
+		"align": [ "wide", "full" ]
+	},
+	"attributes": {
+		"color": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"styles": [
+		{
+			"name": "simple",
+			"label": "Simple",
+			"isDefault": true
+		},
+		{
+			"name": "double-line",
+			"label": "Double line"
+		},
+		{
+			"name": "dotted",
+			"label": "Dotted"
+		},
+		{
+			"name": "dashed",
+			"label": "Dashed"
+		},
+		{
+			"name": "wave",
+			"label": "Wave"
+		},
+		{
+			"name": "bubble",
+			"label": "Bubble"
+		},
+		{
+			"name": "slashed",
+			"label": "Slashed"
+		},
+		{
+			"name": "squared-1",
+			"label": "Squared 1"
+		},
+		{
+			"name": "squared-2",
+			"label": "Squared 2"
+		},
+		{
+			"name": "squared-3",
+			"label": "Squared 3"
+		},
+		{
+			"name": "curly",
+			"label": "Curly"
+		},
+		{
+			"name": "ornament",
+			"label": "Ornament"
+		},
+		{
+			"name": "zigzag",
+			"label": "Zigzag"
+		},
+		{
+			"name": "arrows",
+			"label": "Arrows"
+		},
+		{
+			"name": "cross-1",
+			"label": "Cross 1"
+		},
+		{
+			"name": "cross-2",
+			"label": "Cross 2"
+		},
+		{
+			"name": "pluses",
+			"label": "Pluses"
+		},
+		{
+			"name": "rhombus",
+			"label": "Rhombus"
+		},
+		{
+			"name": "parallelogram",
+			"label": "Parallelogram"
+		},
+		{
+			"name": "rectangles",
+			"label": "Rectangles"
+		},
+		{
+			"name": "garden",
+			"label": "Garden"
+		},
+		{
+			"name": "trees",
+			"label": "Trees"
+		},
+		{
+			"name": "stars-1",
+			"label": "Stars 1"
+		},
+		{
+			"name": "stars-2",
+			"label": "Stars 2"
+		},
+		{
+			"name": "hearts",
+			"label": "Hearts"
+		},
+		{
+			"name": "weaving",
+			"label": "Weaving"
+		}
+	],
+	"textdomain": "hcp-blocks",
+	"category": "hcp-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

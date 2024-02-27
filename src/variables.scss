@@ -1,0 +1,18 @@
+// https://getbootstrap.com/docs/5.2/layout/breakpoints/#min-width
+$breakpoint-mobile: 575.98px    !default; // portrait phones, less than 576px, max-width
+$breakpoint-tablet: 781.98px    !default; // landscape phones, less than 782px, max-width
+$breakpoint-smallpc: 991.98px   !default; // tablets, less than 992px, max-width
+$breakpoint-desktop: 1199.98px  !default; // desktops, less than 1200px, max-width
+$breakpoint-x-large: 1399.98px  !default; // large desktops, less than 1400px
+
+// we don't use
+$content-max-width: 792px;
+
+// Characters which are escaped by the escape-svg function
+$escaped-characters: (
+  ("<", "%3c"),
+  (">", "%3e"),
+  ("#", "%23"),
+  ("(", "%28"),
+  (")", "%29"),
+) !default;
